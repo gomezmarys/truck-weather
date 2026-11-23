@@ -3,10 +3,11 @@ const url =
 const button = document.getElementById("check-btn");
 const weatherArea = document.getElementById("weather");
 async function getWeather() {
+  weatherArea.textContent = "";
   const response = await fetch(url);
   const data = await response.json();
   console.log(data);
-
+  // I am saving this for later hense why it is commented out below
   //   const icon = document.createElement("p");
   //   icon.className = "fs-4";
   //   icon.textContent = getIcon(data.current.weather_code);
@@ -39,7 +40,9 @@ async function getWeather() {
   time.textContent =
     "Date and Time: " +
     new Date(data.current.time).toLocaleString() +
-    data.timezone;
+    "(" +
+    data.timezone +
+    ")";
 
   weatherArea.appendChild(time);
 }
