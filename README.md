@@ -8,9 +8,9 @@ https://api.open-meteo.com/v1/forecast (Open-Meteo, GET)
 
 ## What I changed using the docs
 
-I added wind \_speed_unit=mph so the "Wind Speed: " --- unit changed
-Before: Unit was km/h
-After: Unit was mp/h
+I added wind_speed_unit=mph so the "Wind Speed: " --- unit changed
+Before: Unit was 9 km/h
+After: Unit was 5.6 mp/h
 
 ## Live site
 
